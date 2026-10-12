@@ -8,7 +8,7 @@ All of these datasets come with questions already suggested, so you are STRONGLY
 
 Then create a quarto markdown (qmd) file similar to your lab responses in which you answer that question. That qmd file should include the following:
 
-*Introduction
+* Introduction
 	* A brief description of the dataset and its main variables. 
 	* The research question you are trying to answer related to this dataset
 * Analysis 
