@@ -13,6 +13,7 @@ You can add options to executable code like this
 ```{r}
 library(tidyverse)
 library(terra)
+library(sf)
 ```
 
 
@@ -56,18 +57,55 @@ numbat_wx<-function(row_sel){
 
 #nrow_plus1 <- nrow(numbat_data) + 1 #Did not work, was trying to experiment with the dates
 
-weather_data<-map_df(1:nrow(numbat_data),numbat_wx)
-numbat_wx<-numbat_data %>%
-  rename(date=day) %>%
-  left_join(weather_data)
+weather_data<-map_df(1:nrow(numbat_data),possibly(numbat_wx))
+#numbat_wx<-numbat_data %>%
+  #rename(date=day) %>%
+  #left_join(weather_data)
 
 ```
 
 ```{R}
 #Trying to plot the data for numbat sightings vs. precip (in some way)
 
-#Trying to plot Australia's borders -- this data might not actually be useful if precip data can be loaded
-#australia_borders <- st_read("data/ASGS_2021_MAIN_STRUCTURE_GPKG_GDA2020/ASGS_2021_Main_Structure_GDA2020.gpkg") %>% 
-  #st_transform(4326) #This is just changing the projection
+#Without the weather_data, just the wx data is numbat_data
 
+numbats_cleaned <- numbat_data %>%
+  filter(prcp != "NA") %>%
+  filter(tmax != "NA") %>%
+  mutate(tmax_corr = tmax/10)
+
+ggplot(numbats_cleaned,
+       aes(x=prcp, 
+           y=tmax_corr)) +
+  geom_point() +
+  ggtitle("Precip and Max Temp Obs for Numbat Sightings") +
+  theme(
+    plot.title = element_text(size = 11)) +
+  xlab("Mean Precip (mm)") +
+  ylab("Mean Maximum Temp (°C)") #Had to do this to capitilize "region" in the legend. 
+
+```
+```{R}
+#Plotting the wx_data
+
+ggplot(weather_data,
+       aes(x=rainfall, 
+           y=air_tmax)) +
+  geom_point() +
+  ggtitle("Precip and Max Temp Obs (Overall Weather Dataset)") +
+  theme(
+    plot.title = element_text(size = 11)) +
+  xlab("Mean Precip (mm)") +
+  ylab("Mean Maximum Temp (°C)") #Had to do this to capitilize "region" in the legend. 
+```
+```{R}
+#Trying to plot the numbat obs on a map of Australia to prove the obvious -- numbats are found in desert areas that, unsurprisingly, do not get much rain. 
+
+australia_borders <- st_read("data/AUSTRALIA SHAPEFILE/AUSTRALIA_Shapefiles/Australia_adm/Australia_adm01.shp") %>%
+  st_transform(4326)
+
+ggplot(australia_borders) + 
+  geom_sf()
+
+ggplot()
 ```

@@ -1,0 +1,44 @@
+==============================
+LICENSE AND ATTRIBUTION NOTICE
+==============================
+
+Dataset: AUSTRALIA GIS Shapefiles  
+Prepared by: SimplyGeography.com  
+Date of Packaging: June 2025
+
+------------------------------
+📌 Data Sources and Licenses
+------------------------------
+
+1. OpenStreetMap (ODbL 1.0)
+   Source: https://www.openstreetmap.org  
+   License: Open Database License 1.0  
+   You must provide attribution and share any derived data under the same license.
+
+2. Natural Earth (Public Domain)
+   Source: https://www.naturalearthdata.com  
+   License: Public Domain  
+   No restrictions; credit appreciated.
+
+3. WorldPop (CC BY 4.0)
+   Source: https://www.worldpop.org  
+   License: Creative Commons Attribution 4.0 International  
+   You must provide appropriate credit and link to the license.
+
+------------------------------
+📢 Redistribution Terms
+------------------------------
+These files have been clipped, cleaned, and repackaged for educational and research use.  
+Redistribution is permitted under the terms of the original licenses.  
+By downloading and using these files, you agree to honor the above licenses.
+
+Please **cite the original data providers** if using in reports, websites, or academic work.
+
+------------------------------
+📬 Contact and Feedback
+------------------------------
+If you have questions, want to report an error, or contribute improved versions,  
+please contact: admin@simplygeography.com  
+or visit: https://simplygeography.com/contact
+
+Thank you for using open data responsibly!

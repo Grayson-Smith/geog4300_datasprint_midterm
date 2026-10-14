@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?><MD_Metadata xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xalan="http://xml.apache.org/xalan" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.isotc211.org/2005/gmd">
+    <fileIdentifier>
+        <gco:CharacterString>0ab7e1bfa65b43abb616f5465a85749f</gco:CharacterString>
+    </fileIdentifier>
+    <language>
+        <LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+    </language>
+    <characterSet>
+        <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+    </characterSet>
+    <hierarchyLevel>
+        <MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+    </hierarchyLevel>
+    <hierarchyLevelName>
+        <gco:CharacterString>dataset</gco:CharacterString>
+    </hierarchyLevelName>
+    <contact>
+        <CI_ResponsibleParty>
+            <organisationName>
+                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+            </organisationName>
+            <role>
+                <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+            </role>
+        </CI_ResponsibleParty>
+    </contact>
+    <dateStamp>
+        <gco:Date>2024-06-18</gco:Date>
+    </dateStamp>
+    <metadataStandardName>
+        <gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+    </metadataStandardName>
+    <metadataStandardVersion>
+        <gco:CharacterString>2007</gco:CharacterString>
+    </metadataStandardVersion>
+    <identificationInfo>
+        <MD_DataIdentification>
+            <citation>
+                <CI_Citation>
+                    <title>
+                        <gco:CharacterString>Land Borders - Borderlines</gco:CharacterString>
+                    </title>
+                    <date>
+                        <CI_Date>
+                            <date>
+                                <gco:Date>2021-11-10</gco:Date>
+                            </date>
+                            <dateType>
+                                <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</CI_DateTypeCode>
+                            </dateType>
+                        </CI_Date>
+                    </date>
+                    <citedResponsibleParty>
+                        <CI_ResponsibleParty>
+                            <organisationName>
+                                <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+                            </organisationName>
+                            <role>
+                                <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian" codeSpace="ISOTC211/19115">custodian</CI_RoleCode>
+                            </role>
+                        </CI_ResponsibleParty>
+                    </citedResponsibleParty>
+                </CI_Citation>
+            </citation>
+            <abstract>
+                <gco:CharacterString>Abstract
+Australia's Land Borders is a product within the Foundation Spatial Data Framework (FSDF) suite of datasets. It is endorsed by the ANZLIC – the Spatial Information Council and the Intergovernmental Committee on Surveying and Mapping (ICSM) as the nationally consistent representation of the land borders as published by the Australian states and territories. It is topologically correct in relation to published jurisdictional land borders and the Geocoded National Address File (G-NAF).
+The purpose of this product is to provide: 
+
+a building block which enables development of other national datasets;
+integration with other geospatial frameworks in support of data analysis; and 
+visualisation of these borders as cartographic depiction on a map. 
+
+Although this service depicts land borders, it is not nor does it purport to be a legal definition of these borders. Therefore it cannot and must not be used for those use-cases pertaining to legal context.
+This foundation dataset consists of edges (polylines) representing mediated segments of state and/or territory borders, connected at the nodes and terminated at the coastline defined as the Mean High Water Mark (MHWM) tidal boundary.  These polylines are attributed to convey information about provenance of the source.  
+It is envisaged that land borders will be topologically interoperable with the future national coastline dataset/s, currently being built through the ICSM coastline capture collaboration program.  Topological interoperability will enable closure of land mass polygon, permitting spatial analysis operations such as vector overlay, intersect, or raster map algebra.
+This feature layer is a sub-layer of the Land Borders service.
+Currency
+Date modified: 10 November 2021
+Modification frequency: None
+Data extent
+Spatial extent
+North: -14.88°
+South: -38.06° 
+East: 153.55° West: 129.00°
+Source information
+Catalog entry: Australia's Land Borders 
+The Land Borders dataset is created using a range of source data including:
+
+Australian Capital Territory data was sourced from the ACT Government GeoHub – ‘ACT Boundary’. No changes have been made to the polylines or vertices of the source data. 
+In the absence of any custodian published border for Jervis Bay – New South Wales, a border has been constructed from the boundary of the NSW cadastre supplied by NSW Spatial Services. Geoscience Australia’s GEODATA TOPO 250K data was considered as an alternative, however, that border terminated short of the coastline as it stops at the shoreline of the major water bodies. Therefore, a decision was made to use the NSW and OT supplied cadastre to create a new representation of the Jervis Bay border that continued to the coastline (MHWM), in place of the TOPO 250K data. 
+In the absence of publicly available data from New South Wales, the land borders for New South Wales have been constructed using the data of adjoining states Queensland, South Australia, Victoria and the Australian Capital Territory. This approach is agreeable to New South Wales Government for this interim product. 
+In the absence of publicly available data from the Northern Territory the land borders for the Northern Territory have been constructed using the data of adjoining states Western Australia, Queensland and South Australia. This approach is agreeable to Northern Territory Government for this interim product. 
+Queensland state border and coastline data have been download from the Queensland Spatial, Catalogue – QSpatial. 
+Publicly available data for the state borders of South Australia was downloaded from data.gov.au and is ‘SA State Boundary - PSMA Administrative Boundaries’. Downloaded as a file geodatabase in GDA2020. 
+Victorian state border data has been downloaded from the Victorian state Government Spatial Datamart, it is titled ‘FR_FRAMEWORK_AREA_LINE’. The Victorian state border data was used for the NSW/VIC section of border due to the absence of any publicly available data from New South Wales for this section of the border. 
+Western Australian state border data was downloaded from the WA Government as publicly available. The Western Australia state border data has been used for the WA/NT section of the border due to the absence of publicly available data from Northern Territory for this section of the border. Selecting the SA data for the WA/SA border would introduce mismatches with the WA cadastre. It would also not improve the SA relationship with the SA cadastre. Using the WA data for the WA/SA section of the border aligns each state with its own cadastre without causing overlaps. 
+
+Lineage statement
+At the southwest end of the NT/SA/WA border the South Australian data for the border was edited by moving the end vertex ~1.7m to correctly create the intersection of the 3 states (SA/WA/NT). 
+At the southeast end of the NT/QLD/SA border the South Australian data for the border was edited by moving the end vertex ~0.4m to correctly create the intersection of the 3 states (NT/SA/QLD). 
+Queensland data was used for the NT/QLD border and the QLD/NSW border due to the absence of publicly available data from the Northern Territory for these section of the border.  Data published by Queensland also included a border sections running westwards along the southern Northern Territory border and southwards along the western New South Wales border.  These two sections were excluded from the product as they are not within the state of Queensland. Queensland data was also used in the entirety for the SA/QLD segment of the land borders.  Although the maximum overlap between SA and QLD state border data was less than ~5m (and varied along the border), the Queensland data closely matched its own cadastre and that of South Australia.  The South Australian data overlapped the Queensland data, it also did not match the South Australian cadastre.  Therefore, a decision to use the Queensland data for the QLD/SA section of the border ensured the best possible topological consistency with the published cadastre of each state. 
+The South Australian/Victorian state border, north-south, were generally very similar with some minor deviations from each other from less than 1m to ~60m (there is one instance of deviation of 170m). The section of border that follows the Murray River is matched, for the most part by both states. Over three quarters of the border running along the river is matched with both states. There is a mismatch between the states in the last quarter of the border along the river, the northern section, however, both states still have the border running inside, or along, the river polygon (Surface hydrology), the Victorian data was chosen for this section purely for consistency as the Victorian data was used for the preceding arcs. 
+Overall, the Victorian data was selected for use as the South Australia/Victoria land border. After taking the existing cadastre and GNAF points into account and it did not introduce extra errors into the relationship between the land borders and the cadastre of either state. In parts, it improved the relationship between the South Australian cadastre and the SA/VIC state border. 
+This interim product will be updated when all states and territories have published agreed, authoritative representations of their land borders. This product will also be updated to include land mass polygons at time when the Coastline Capture Program is complete. This dataset is GDA 2020 compliant - transformed into GDA2020 from it's original source datum. Reference System Code 2020.00.
+Data dictionary
+All layers
+
+
+
+Attribute name
+Description
+
+
+
+
+COMMENT
+Legal disclaimer for the positional data
+
+
+CREATED
+Date on which the positional data point was created in the data set
+
+
+CUSTODIAN
+Department or jurisdiction from which the data point information is derived
+
+
+DATE_DOWNLOADED
+Date on which the positional data point was created in the data set
+
+
+FEATURE_TYPE
+All features in this data set are labelled &amp;quot;STATE BORDER&amp;quot;
+
+
+LAST_UPDAT_FROM_SOURCE
+Date on which the positional data point was refreshed from source data
+
+
+METADATA_LINK
+External link to metadata from the data source
+
+
+SOURCE_DATA
+External link to metadata from the data source
+
+
+SOURCE_STATE
+State or Territory which hosts the data source
+
+
+STATE
+Land borders divide exactly two states and/or territories
+
+
+STATEMENT
+Legal disclaimer for the positional data
+
+
+
+Contact
+Geoscience Australia, clientservices@ga.gov.au </gco:CharacterString>
+            </abstract>
+            <purpose>
+                <gco:CharacterString>Nationally consistent representation of the land borders of all Australian states and territories, from Geoscience Australia (GA).</gco:CharacterString>
+            </purpose>
+            <credit>
+                <gco:CharacterString>© Commonwealth of Australia (Geoscience Australia)</gco:CharacterString>
+            </credit>
+            <pointOfContact>
+                <CI_ResponsibleParty>
+                    <organisationName>
+                        <gco:CharacterString>Geoscience Australia</gco:CharacterString>
+                    </organisationName>
+                    <role>
+                        <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+                    </role>
+                </CI_ResponsibleParty>
+            </pointOfContact>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Administrative Boundaries</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Place Names</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>States</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <resourceConstraints>
+                <MD_Constraints>
+                    <useLimitation>
+                        <gco:CharacterString>License: Creative Commons Attribution 4.0
+Access rights: Open
+Security Classification: OFFICIAL</gco:CharacterString>
+                    </useLimitation>
+                </MD_Constraints>
+            </resourceConstraints>
+            <language>
+                <LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+            </language>
+            <characterSet>
+                <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+            </characterSet>
+            <topicCategory>
+                <MD_TopicCategoryCode>boundaries</MD_TopicCategoryCode>
+            </topicCategory>
+            <extent>
+                <EX_Extent>
+                    <geographicElement>
+                        <EX_GeographicBoundingBox>
+                            <westBoundLongitude>
+                                <gco:Decimal>129</gco:Decimal>
+                            </westBoundLongitude>
+                            <eastBoundLongitude>
+                                <gco:Decimal>153.55</gco:Decimal>
+                            </eastBoundLongitude>
+                            <southBoundLatitude>
+                                <gco:Decimal>-38.06</gco:Decimal>
+                            </southBoundLatitude>
+                            <northBoundLatitude>
+                                <gco:Decimal>-14.88</gco:Decimal>
+                            </northBoundLatitude>
+                        </EX_GeographicBoundingBox>
+                    </geographicElement>
+                    <geographicElement>
+                        <EX_GeographicDescription>
+                            <extentTypeCode>
+                                <gco:Boolean>true</gco:Boolean>
+                            </extentTypeCode>
+                            <geographicIdentifier>
+                                <MD_Identifier>
+                                    <code>
+                                        <gco:CharacterString>AUS</gco:CharacterString>
+                                    </code>
+                                </MD_Identifier>
+                            </geographicIdentifier>
+                        </EX_GeographicDescription>
+                    </geographicElement>
+                </EX_Extent>
+            </extent>
+        </MD_DataIdentification>
+    </identificationInfo>
+    <distributionInfo>
+        <MD_Distribution>
+            <transferOptions>
+                <MD_DigitalTransferOptions>
+                    <onLine>
+                        <CI_OnlineResource>
+                            <linkage>
+                                <URL>https://services.ga.gov.au/gis/rest/services/AustraliasLandBorders/MapServer/2</URL>
+                            </linkage>
+                        </CI_OnlineResource>
+                    </onLine>
+                </MD_DigitalTransferOptions>
+            </transferOptions>
+        </MD_Distribution>
+    </distributionInfo>
+</MD_Metadata>
