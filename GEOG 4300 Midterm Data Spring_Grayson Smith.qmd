@@ -104,8 +104,22 @@ ggplot(weather_data,
 australia_borders <- st_read("data/AUSTRALIA SHAPEFILE/AUSTRALIA_Shapefiles/Australia_adm/Australia_adm01.shp") %>%
   st_transform(4326)
 
-ggplot(australia_borders) + 
-  geom_sf()
+australia_borders <- map_data("world",region = "Australia")
 
-ggplot()
+ggplot() +
+  geom_polygon(data=australia_borders,
+               aes(x=long,
+                   y=lat,
+                   group=group,
+                   color="gray60",
+                   alpha=0.5)) +
+  geom_point(data=numbat_data,
+             aes(x=decimalLongitude,
+                 y=decimalLatitude))
+
+numbat_data_spatial <- read_csv("data/numbats.csv") %>%
+  st_as_sf(coords = c("decimalLongitude", "decimalLatitude"), #Identify the coordinate variables
+           crs = 4326, #Identify the projection (4326 is WGS84)
+           remove = FALSE)
+
 ```
