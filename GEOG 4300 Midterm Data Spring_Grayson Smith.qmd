@@ -8,7 +8,7 @@ editor: source
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-You can add options to executable code like this
+*Chunk 1*: Loading the required packages, including the tidyverse for data manipulation. Although I loaded terra and sf -- as I intended to do some more spatial analysis than I ultimately was able to peform -- I did not use them. 
 
 ```{r}
 library(tidyverse)
@@ -16,10 +16,10 @@ library(terra)
 library(sf)
 ```
 
+*Chunk 2*: In this chunk, I utilized Dr. Shannon's script to read in the numbats data and weather data (using the weatherOz package). It appears that this chunk works to first manipulate the numbats data -- including via the addition of a 0 to the month data to put it in a format consistent with the weather data. From there, weather data is extracted using the SILO API to get a more complete record of weather data -- given that the weather data provided in the numbat sightings is very incomplete. After that, an attempt was made to join the weather and numbat datasets; however, the lack of an exact-matching field with which the join could be peformed made this task difficult (and thus it was not completed).  
 
 ```{r}
 #Using Dr. Shannon's script to get wx data in:
-library(tidyverse)
 
 install.packages("weatherOz")
 library(weatherOz)
@@ -67,7 +67,7 @@ weather_data<-map_df(1:nrow(numbat_data),possibly(numbat_wx))
 ```{R}
 #Trying to plot the data for numbat sightings vs. precip (in some way)
 
-#Without the weather_data, just the wx data is numbat_data
+#Without the weather_data, just the wx data in numbat_data
 
 numbats_cleaned <- numbat_data %>%
   filter(prcp != "NA") %>%
@@ -119,3 +119,25 @@ ggplot() +
   labs(title = "Numbat Sightings in Australia")
 
 ```
+
+**Discusssion**
+
+*Introduction*
+A brief description of the dataset and its main variables.
+The research question you are trying to answer related to this dataset. 
+
+Response: For this activity, I utilized the numbats dataset we chose in class. This dataset includes data on numbat sightings across Australia, including their location, scientific name, date, and a limited amount of weather data (like temp and precip). 
+
+The research question I was attempting to answer was examining the relationship between numbat sightings and weather conditions. My original question was trying to just evaluate the relationship between numbats and precip amounts; however, I pivoted to the above mentioned question (looking at the broader relationship between numbat sightings and weather observations). Specifically, I eventually attempted to answer whether there is any difference in temp and precip distribution for numbat sightings compared to the overall temp and precip distribution. 
+
+*Analysis*
+A section in which you answer that question using R coding skills you've learned. This will include code chunks as well as brief description of what each of those code chunks is doing.
+This section should include at least two visualizations (graphs/maps) relevant to your research question.
+
+Response: The analysis of my code chunks -- and my visualizations -- is provided above. 
+
+*Discussion*
+Explains how you would answer your research question based on your analysis. Make specific reference to the results in your analysis section that support this answer.
+
+*Tie to class*
+Explain how this exercise shows what you've learned in the class thus far, mentioning at least three relevant learning standards.
