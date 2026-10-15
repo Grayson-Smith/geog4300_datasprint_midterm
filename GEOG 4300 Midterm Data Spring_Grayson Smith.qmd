@@ -8,7 +8,7 @@ editor: source
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-*Chunk 1*: Loading the required packages, including the tidyverse for data manipulation. Although I loaded terra and sf -- as I intended to do some more spatial analysis than I ultimately was able to peform -- I did not use them. 
+*Chunk 1*: Loading the required packages, including the tidyverse for data manipulation. Although I loaded terra and sf, I only used sf once to load in Australia's borders, and I did not use terra. I originally intended to do a more spatially-focused analysis for this data sprint; however, I was limited by data availability and my own ability. I will certainly work to improve in the spatial analysis area.
 
 ```{r}
 library(tidyverse)
@@ -64,6 +64,12 @@ weather_data<-map_df(1:nrow(numbat_data),possibly(numbat_wx))
 
 ```
 
+*Chunk 3*: In this chunk, I aimed to plot the max temp and precip observations for each numbat sighting that recorded weather data. The goal of this, albeit very simple, exercise, was to determine if there was any meaningful pattern in either the temp or precip recorded on the days that numbats were spotted. 
+
+To accomplish this, I first cleaned the numbats data (using the variable `numbats_cleaned`) to remove all observations that were missing data for precip or max temp. I then mutated the max temp readings (by dividing each value by 10) to get a decimal point into the reported values (as they previously lacked one, and were thus reporting temp values in the hundreds of degrees Celsius [i.e., the raw data listed the temp as 300°C, where the actual reading should be 30.0°C]). 
+
+From there, I created a very simple visual (as given below the code chunk) that depicted the precip value (on the x-axis) and the max temp value (on the y-axis) for each numbat sighting. An analysis of that visualization is left for the discussion section. 
+
 ```{R}
 #Trying to plot the data for numbat sightings vs. precip (in some way)
 
@@ -85,6 +91,9 @@ ggplot(numbats_cleaned,
   ylab("Mean Maximum Temp (°C)") #Had to do this to capitilize "region" in the legend. 
 
 ```
+
+*Chunk 4*: In this chunk, I create a very similar (and again, very simple) graphic to show the max temp and precip data for all the weather data gathered in Chunk 2. An explanation of this graphic is provided in the discussion. 
+
 ```{R}
 #Plotting the wx_data
 
@@ -96,13 +105,22 @@ ggplot(weather_data,
   theme(
     plot.title = element_text(size = 11)) +
   xlab("Mean Precip (mm)") +
-  ylab("Mean Maximum Temp (°C)") #Had to do this to capitilize "region" in the legend. 
+  ylab("Mean Maximum Temp (°C)") 
 ```
+
+*Chunk 5*: Here, I begin by loading in a simple shapefile of Australia's borders (using the original `australia_borders` variable) using st_read. However, Will (2) showed me an even more intuitive way of getting that geographic information (apparently also including a shaded area for the country, using the map_data function), so I ended up using data from that source. I only maintained the previous version of data retreival for reference purposes. 
+
+After that, I created another plot that leverages the above-mentioned Australia geographic information to plot numbat observations across the country. The numbat sightings are given by the black dots. 
+
+It should also be noted that I attempted to find a raster of Australia precip data to overlay onto this map -- just to demonstrate that numbats tend to live in areas devoid of precip (which also makes sense on an intuitive sense) -- however, I ran into data availability and time constraints. Nevertheless, I did attach an image to my repo that contains that precip data (just for reference). That file is titled "Australia precip data_Australia BOM" and is sourced from the Australia Bureau of Meteorology.
+
+Further, it should be noted that all the numbat observations that had meteorological data occurred in the extreme SW part of Australia. I included rthe remainder of the observations for reference. 
+
 ```{R}
 #Trying to plot the numbat obs on a map of Australia to prove the obvious -- numbats are found in desert areas that, unsurprisingly, do not get much rain. 
 
-australia_borders <- st_read("data/AUSTRALIA SHAPEFILE/AUSTRALIA_Shapefiles/Australia_adm/Australia_adm01.shp") %>%
-  st_transform(4326)
+#australia_borders <- st_read("data/AUSTRALIA SHAPEFILE/AUSTRALIA_Shapefiles/Australia_adm/Australia_adm01.shp") %>%
+  #st_transform(4326)
 
 australia_borders <- map_data("world",region = "Australia")
 
@@ -139,5 +157,15 @@ Response: The analysis of my code chunks -- and my visualizations -- is provided
 *Discussion*
 Explains how you would answer your research question based on your analysis. Make specific reference to the results in your analysis section that support this answer.
 
+Response: Based on my analysis section, I found that the max temp and precip distributions for numbat sightings does not vary meaningfully from the overall distribution of those variables. This is demonstrated by the fact that there is a very similar distribution of both variables between my first and second visualization (using the numbat weather data and overall weather data, respectively). I should note that I have very low confidence in the values reported -- especialy for precip -- in the numbats dataset, given that this data appears to report rainfall that is far higher than given in the overall weather data from SILO (including one observation well over 90 mm, when the overall weather data has no observations anywhere close to that value). In any case, the general distribution appears to be the same, suggesting that there is no meaningful difference between the weather numbats prefer and the overall spread of weather in those areas that numbats are sighted. 
+
 *Tie to class*
 Explain how this exercise shows what you've learned in the class thus far, mentioning at least three relevant learning standards.
+
+Response: 
+
+Talk about these learning standards: 
+1. Identify and apply appropriate data filtering and cleaning strategies to prepare datasets for analysis. (Labs 0, 1, 3, 4)
+2. Derive new variables from existing ones through calculated transformations, including unit conversions, differences across time periods, and categorical dummy variables.
+3. Create effective data visualizations across multiple chart types (line, scatter, histogram, Q-Q plot), applying appropriate aesthetic choices such as color, grouping, and labeling. (Labs 1, 3, 4, 5)
+4. Recognize and be able to manipulate multiple data object types (vectors, data frames, or lists). (Labs 0, 1, 2, 3, 4, 5, 6)
