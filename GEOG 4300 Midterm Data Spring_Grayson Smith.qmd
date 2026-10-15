@@ -111,15 +111,11 @@ ggplot() +
                aes(x=long,
                    y=lat,
                    group=group,
-                   color="gray60",
                    alpha=0.5)) +
   geom_point(data=numbat_data,
              aes(x=decimalLongitude,
-                 y=decimalLatitude))
-
-numbat_data_spatial <- read_csv("data/numbats.csv") %>%
-  st_as_sf(coords = c("decimalLongitude", "decimalLatitude"), #Identify the coordinate variables
-           crs = 4326, #Identify the projection (4326 is WGS84)
-           remove = FALSE)
+                 y=decimalLatitude)) +
+  guides(alpha = "none") +
+  labs(title = "Numbat Sightings in Australia")
 
 ```
