@@ -159,13 +159,29 @@ Explains how you would answer your research question based on your analysis. Mak
 
 Response: Based on my analysis section, I found that the max temp and precip distributions for numbat sightings does not vary meaningfully from the overall distribution of those variables. This is demonstrated by the fact that there is a very similar distribution of both variables between my first and second visualization (using the numbat weather data and overall weather data, respectively). I should note that I have very low confidence in the values reported -- especialy for precip -- in the numbats dataset, given that this data appears to report rainfall that is far higher than given in the overall weather data from SILO (including one observation well over 90 mm, when the overall weather data has no observations anywhere close to that value). In any case, the general distribution appears to be the same, suggesting that there is no meaningful difference between the weather numbats prefer and the overall spread of weather in those areas that numbats are sighted. 
 
+In the end, this finding is not particularly interesting or surprising -- and certainly indicates to me that I should've chosen better methods and/or a better question. 
+
 *Tie to class*
 Explain how this exercise shows what you've learned in the class thus far, mentioning at least three relevant learning standards.
 
 Response: 
 
-Talk about these learning standards: 
+I believe that I demonstrated the following competencies -- at least in part -- from completing this lab: 
 1. Identify and apply appropriate data filtering and cleaning strategies to prepare datasets for analysis. (Labs 0, 1, 3, 4)
+  - I think I demonstrated this skill by filtering the data in Chunk 3, along with the general strategy of knowing what steps to take (even if they were simple) to properly analyze the data.
+  
 2. Derive new variables from existing ones through calculated transformations, including unit conversions, differences across time periods, and categorical dummy variables.
+  - Again, although my demonstration of this skill was simple, I used this skill when I used mutate() in Chunk 3 in order to get the temp data to be more realistic.
+  
 3. Create effective data visualizations across multiple chart types (line, scatter, histogram, Q-Q plot), applying appropriate aesthetic choices such as color, grouping, and labeling. (Labs 1, 3, 4, 5)
+  - I, again simply, used this skill in all my visualizations given above. None of them have any notable color because I did not group the data (since I was looking at precip and temp for the observations as a whole, not a particular subset thereof). Given my figures were pretty simple, I also did not make too many aesthetics changes; however, I was able to add a title to each graphic to make them visually appealing and informational. Together, I would have hoped to demonstrate more advnaced skills in this area (as we have in the labs); however, my very simple research question (and limitations imposed by time and my ability) precluded that here. I certainly aim to improve in future data sprints. 
+  
 4. Recognize and be able to manipulate multiple data object types (vectors, data frames, or lists). (Labs 0, 1, 2, 3, 4, 5, 6)
+ - Although simply, I demonstrated this skill here by dealing with both data frames and vector data (i.e., the Australian borders dataset and the points-based numbat spatial data). 
+ 
+Overall, although I was able to demonstrate the above competencies in a limited way through this exercise, I certianly hope to improve that usage in the future. Time and data were certainly a limitation; however, I aim to overcome those challenges in future exercise like this, and to make an attempt to use some of the more advanced techniques we've covered in class in future analyses. In any case, this exercise certainly was helpful in gauging my current skill level, and I will aim to make it further learning material in the labs and other data analysis activities to come. 
+
+
+*NOTE*: I also apologize for the delay in submission. Please let me know if this is an issue -- or if there is any issue with the content above -- and I will absolutely attempt to fix them. 
+
+Thank you!
