@@ -177,7 +177,9 @@ I believe that I demonstrated the following competencies -- at least in part -- 
   - I, again simply, used this skill in all my visualizations given above. None of them have any notable color because I did not group the data (since I was looking at precip and temp for the observations as a whole, not a particular subset thereof). Given my figures were pretty simple, I also did not make too many aesthetics changes; however, I was able to add a title to each graphic to make them visually appealing and informational. Together, I would have hoped to demonstrate more advnaced skills in this area (as we have in the labs); however, my very simple research question (and limitations imposed by time and my ability) precluded that here. I certainly aim to improve in future data sprints. 
   
 4. Recognize and be able to manipulate multiple data object types (vectors, data frames, or lists). (Labs 0, 1, 2, 3, 4, 5, 6)
- - Although simply, I demonstrated this skill here by dealing with both data frames and vector data (i.e., the Australian borders dataset and the points-based numbat spatial data). 
+ - Although simply, I demonstrated this skill here by dealing with both data frames and vector data (i.e., the Australian borders dataset and the points-based numbat spatial data).
+ 
+In general, I think I also demonstrated that I could analyze patterns in data -- even if the patterns here were not all that complicated or surprising. 
  
 Overall, although I was able to demonstrate the above competencies in a limited way through this exercise, I certianly hope to improve that usage in the future. Time and data were certainly a limitation; however, I aim to overcome those challenges in future exercise like this, and to make an attempt to use some of the more advanced techniques we've covered in class in future analyses. In any case, this exercise certainly was helpful in gauging my current skill level, and I will aim to make it further learning material in the labs and other data analysis activities to come. 
 
